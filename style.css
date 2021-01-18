@@ -1,0 +1,253 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    display: block;
+}
+
+.navbar{
+    background-color: darkslategrey;
+}
+
+.nav-links{
+    display: flex;
+}
+
+.nav-a{
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover{
+    color: yellow;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.blocks{
+    display: flex;
+}
+
+.left-block{
+    /* position: absolute; */
+    flex:25%;
+    padding: 15px;
+    /* width: 25vw; */
+}
+
+.left-a{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+.middle-block{
+    flex:50%;
+    padding: 15px;
+    justify-content: center;
+    /* margin: auto; */
+    align-content: center;
+    align-items: center;
+}
+
+.middle-1{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dotted red;
+}
+
+.middle-2{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dotted red;
+}
+
+.middle-3{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dotted red; 
+}
+
+.middle-row{
+    flex: 25%;
+    margin: 20px;
+    padding: 20px;
+    border: 2px dotted blue;
+}
+
+.right-block{
+    flex:25%;
+    padding-top: 15px;
+    justify-content: center;
+    /* margin: auto; */
+    align-content: center;
+    align-items: center;;
+}
+
+.right-row{
+    /* width: 100%; */
+    margin: 20px;
+    padding: 20px;
+    border: 2px dotted blue;
+}
+
+.footer{
+    padding: 20px;
+    text-align: center;
+    background: #ddd;    
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .nav-links{
+        flex-direction: column;
+    }
+
+    .blocks {
+      flex-direction: column;
+      flex: 100%;
+    }
+    .left-block{
+        text-align: center;
+    }
+    .middle-1 {
+        /* flex-direction: column; */
+    }
+
+    .middle-2 {
+        /* flex-direction: column; */
+    }
+
+    .middle-3 {
+        /* flex-direction: column; */
+    }
+
+    .middle-row{
+        flex: 100%;
+        margin: 20px;
+        padding: 20px;
+        border: 2px dotted blue;
+    }
+
+    .right-block{
+      
+    }
+    .nav-list{
+        /* display: none; */
+    }
+    .navbar{
+        height: 10vh;
+        width: 100vw;
+        background-color: darkslategrey;
+        /* display: none; */
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+
+    .line{
+        width: 30px;
+        height: 5px;
+        background-color: white;
+        margin: 5px;
+    }
+
+    .humburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+
+    .navbar{
+        position: fixed;
+        flex-direction: column;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        position: fixed;
+        background-color: darkslategrey;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-around;
+        align-items: center;
+        clip-path: circle(100px at 90% -20%);
+        /* -webkit-clip-path: circle(100px at 90% -20%); */
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open{
+        clip-path: circle(5000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .blocks {
+      flex-direction: column;
+      flex: 100%;
+    }
+    .left-block{
+        text-align: center;
+    }
+
+    .middle-block{
+        flex:100%;
+        padding: 15px;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .middle-1 {
+        /* flex-wrap: wrap; */
+    }
+
+    .middle-2 {
+        /* flex-direction: column; */
+    }
+
+    .middle-3 {
+        /* flex-direction: column; */
+    }
+
+    .middle-row{
+        /* flex: 50%; */
+        /* width: 50px; */
+        margin: 20px;
+        padding: 20px;
+        border: 2px dotted blue;
+    }
+
+    .right-block{
+      
+    }
+    .nav-list{
+        /* display: none; */
+    }
+    .navbar{
+        height: 10vh;
+        width: 100vw;
+        background-color: darkslategrey;
+        /* display: none; */
+    }
+  }
